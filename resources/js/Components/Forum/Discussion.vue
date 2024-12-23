@@ -1,4 +1,6 @@
 <script setup>
+import { Link } from '@inertiajs/vue3';
+
     const props = defineProps({
         discussion: {
             required: true,
@@ -8,8 +10,9 @@
 </script>
 
 <template>
-    <div
-        class="overflow-hidden bg-white shadow-sm sm:rounded-lg"
+    <Link
+    :href="route('discussion.show', discussion)"
+        class="block overflow-hidden bg-white shadow-sm sm:rounded-lg"
     >
         <div class="p-6 text-gray-900 flex items-center space-x-6">
             <div class="flex-grow" >
@@ -32,5 +35,5 @@
             </div>
             
         </div>
-    </div>
+    </Link>
 </template>
