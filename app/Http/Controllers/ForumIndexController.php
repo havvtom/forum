@@ -15,7 +15,7 @@ class ForumIndexController extends Controller
                 Discussion::with(['topic'])
                             ->orderByDesc('pinned_at')
                             ->latest() //Remove when implemented ordering by last post
-                            ->paginate(10)
+                            ->paginate(1)
                             )
         ]
     );
